@@ -1,50 +1,1308 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#090817" />
-<meta name="description" content="Amit Dorwekar — DevOps / Cloud Engineer building CI/CD pipelines, cloud infrastructure, and automation projects." />
-<title>AMITVERSE — Amit Dorwekar | DevOps Engineer</title>
-<style>
-:root{--bg:#080714;--panel:rgba(19,17,43,.68);--line:rgba(255,255,255,.13);--text:#f7f3ff;--muted:#b9b4d3;--pink:#ff48c4;--blue:#50b8ff;--violet:#a779ff;--lime:#c7ff5e;--teal:#5effe0;--orange:#ff9b58;--radius:24px;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.universe{position:fixed;inset:0;z-index:-3;overflow:hidden;background:radial-gradient(ellipse at 12% 15%,#31105e 0,transparent 35%),radial-gradient(ellipse at 85% 18%,#082e58 0,transparent 33%),radial-gradient(ellipse at 55% 90%,#401039 0,transparent 35%),#080714}.blob{position:absolute;width:38vw;height:38vw;min-width:280px;min-height:280px;border-radius:44% 56% 63% 37% / 45% 42% 58% 55%;filter:blur(55px);opacity:.34;mix-blend-mode:screen;animation:morph 17s ease-in-out infinite alternate,drift 25s ease-in-out infinite}.blob.one{top:3%;left:-10%;background:linear-gradient(135deg,var(--pink),var(--violet),var(--blue))}.blob.two{top:33%;right:-13%;background:linear-gradient(135deg,var(--teal),var(--blue),var(--violet));animation-delay:-7s}.blob.three{bottom:-18%;left:27%;background:linear-gradient(135deg,var(--orange),var(--pink),var(--lime));animation-delay:-11s}.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}.stars{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:radial-gradient(1px 1px at 18% 24%,#fff 50%,transparent 100%),radial-gradient(2px 2px at 72% 14%,#aee9ff 50%,transparent 100%),radial-gradient(1px 1px at 84% 66%,#fff 50%,transparent 100%),radial-gradient(1px 1px at 32% 78%,#ffb8ed 50%,transparent 100%),radial-gradient(2px 2px at 54% 43%,#fff 50%,transparent 100%);background-size:290px 260px;opacity:.65;animation:twinkle 6s ease-in-out infinite alternate}
-@keyframes morph{0%{border-radius:44% 56% 63% 37% / 45% 42% 58% 55%;transform:rotate(0)}100%{border-radius:61% 39% 34% 66% / 58% 65% 35% 42%;transform:rotate(35deg)}}@keyframes drift{50%{translate:5vw -3vh}}@keyframes twinkle{to{opacity:.28}}@keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}@keyframes shimmer{to{background-position:220% center}}@keyframes pulse{50%{box-shadow:0 0 28px #c7ff5e55}}
-.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.nav-wrap{position:sticky;top:12px;z-index:20;padding-top:12px}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 16px;border:1px solid var(--line);border-radius:18px;background:rgba(9,8,26,.76);backdrop-filter:blur(18px);box-shadow:0 12px 45px #0003}.brand{font-weight:900;letter-spacing:.08em;font-size:.95rem}.brand span{color:var(--lime)}.nav-links{display:flex;gap:19px;align-items:center;font-size:.86rem;color:var(--muted)}.nav-links a:hover{color:#fff}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:999px;font-weight:750;font-size:.9rem;border:1px solid var(--line);transition:transform .2s,border-color .2s,background .2s}.nav-cta{background:linear-gradient(100deg,#a779ff33,#ff48c433);color:#fff}.btn:hover,.nav-cta:hover{transform:translateY(-3px);border-color:#ffffff70}.btn.primary{border:0;color:#10091e;background:linear-gradient(105deg,var(--lime),var(--teal),#8cdcff);box-shadow:0 0 25px #5effe033}.btn.ghost{background:#ffffff08}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:#ffffff08;border-radius:999px;padding:7px 12px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#e7ddff}.live-dot{width:8px;height:8px;background:var(--lime);border-radius:50%;box-shadow:0 0 12px var(--lime);animation:pulse 2s infinite}.hero{min-height:84vh;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding-top:76px;padding-bottom:80px}.hero h1{font-size:clamp(3.5rem,8.2vw,7.2rem);line-height:.91;letter-spacing:-.075em;margin:24px 0}.gradient-text{background:linear-gradient(100deg,#fff 5%,#b5e7ff 24%,#d9a2ff 48%,#ff83d7 66%,#d6ff86 85%);background-size:220% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:shimmer 9s linear infinite}.hero p{max-width:650px;color:var(--muted);font-size:1.08rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}.mini-stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:36px;color:var(--muted);font-size:.85rem}.mini-stats strong{display:block;color:#fff;font-size:1.15rem}.orbital{min-height:400px;position:relative;display:grid;place-items:center;isolation:isolate}.orbital:before,.orbital:after{content:"";position:absolute;width:min(34vw,390px);aspect-ratio:1;border:1px solid #ffffff2c;border-radius:50%;transform:rotate(-25deg) scaleY(.55)}.orbital:after{transform:rotate(58deg) scaleY(.55);width:min(30vw,350px);border-color:#ff48c466}.orbit-core{width:190px;aspect-ratio:1;border-radius:36% 64% 59% 41% / 42% 40% 60% 58%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 28% 25%,#ffffff99,transparent 19%),linear-gradient(145deg,#ff48c4,#8b55ff 46%,#31cfff);box-shadow:0 0 40px #a779ff77,0 0 100px #ff48c444,inset -20px -20px 50px #08071477;animation:morph 9s ease-in-out infinite alternate,float 7s ease-in-out infinite}.orbit-core span{font-weight:950;font-size:1.65rem;letter-spacing:-.06em;text-shadow:0 2px 15px #170525}.orbit-chip{position:absolute;border:1px solid #ffffff35;background:#100d29cc;backdrop-filter:blur(12px);padding:10px 13px;border-radius:14px;font-size:.82rem;box-shadow:0 10px 30px #0003}.orbit-chip b{color:var(--lime)}.chip-a{top:14%;left:0}.chip-b{right:-1%;top:28%}.chip-c{bottom:15%;left:6%}.chip-d{bottom:10%;right:5%}.section{padding:74px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.kicker{color:var(--lime);text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:800}.section h2{font-size:clamp(2rem,4.5vw,3.6rem);line-height:1.04;letter-spacing:-.055em;margin:8px 0}.section-intro{max-width:600px;color:var(--muted);margin:0}.glass{background:linear-gradient(145deg,rgba(24,20,54,.78),rgba(12,12,31,.64));border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(16px);box-shadow:0 22px 70px #0002}.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.about-copy{padding:30px}.about-copy p{color:var(--muted);margin-top:0}.quote{border-left:2px solid var(--pink);padding-left:16px;color:#e9dfff!important}.principles{display:grid;gap:12px}.principle{padding:21px}.principle .icon{font-size:1.35rem}.principle h3{margin:8px 0 3px;font-size:1rem}.principle p{margin:0;color:var(--muted);font-size:.88rem}.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stack-card{padding:22px;min-height:190px;transition:transform .25s,border-color .25s}.stack-card:hover,.project-card:hover{transform:translateY(-5px);border-color:#ffffff55}.stack-icon{font-size:1.6rem}.stack-card h3{margin:9px 0;font-size:1rem}.pills{display:flex;flex-wrap:wrap;gap:7px}.pill{border:1px solid #ffffff18;background:#ffffff08;color:#e3ddfa;border-radius:999px;padding:5px 9px;font-size:.76rem}.project-tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.filter{border:1px solid var(--line);background:#ffffff07;color:var(--muted);padding:8px 13px;border-radius:999px;cursor:pointer}.filter.active,.filter:hover{background:#c7ff5e17;border-color:#c7ff5e77;color:var(--lime)}.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.project-card{padding:25px;display:flex;flex-direction:column;min-height:365px;transition:transform .25s,border-color .25s;position:relative;overflow:hidden}.project-card:before{content:"";position:absolute;width:200px;height:200px;right:-110px;top:-115px;border-radius:50%;background:var(--glow,#ff48c4);filter:blur(70px);opacity:.19;pointer-events:none}.project-top{display:flex;justify-content:space-between;gap:16px;align-items:start}.project-number{font-size:.78rem;letter-spacing:.12em;color:var(--lime);font-weight:800}.project-card h3{font-size:1.35rem;line-height:1.2;letter-spacing:-.025em;margin:10px 0}.project-card p{color:var(--muted);font-size:.92rem}.project-card ul{padding-left:18px;color:#d6d0e9;font-size:.88rem}.project-card li{margin:5px 0}.project-card .pills{margin-top:auto;padding-top:18px}.project-link{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-weight:750;font-size:.88rem;margin-top:18px;width:max-content}.project-link:hover{color:#fff}.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0 6px}.flow span{border:1px solid #ffffff1e;background:#ffffff08;border-radius:9px;padding:7px 9px;font-size:.75rem;color:#e8e2ff}.flow i{color:var(--pink);font-style:normal}.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.cert{padding:24px;display:flex;gap:17px;align-items:flex-start}.cert-mark{display:grid;place-items:center;flex:0 0 54px;height:54px;border-radius:17px;background:linear-gradient(145deg,#ff9b5830,#ff48c430);border:1px solid #ff9b5850;font-size:1.5rem}.cert h3{margin:0 0 5px}.cert p{color:var(--muted);margin:0;font-size:.88rem}.contact-box{padding:clamp(26px,5vw,55px);position:relative;overflow:hidden}.contact-box:after{content:"✦";position:absolute;font-size:16rem;right:-15px;bottom:-120px;line-height:1;color:#ffffff06;pointer-events:none}.contact-box h2{max-width:720px}.contact-box p{color:var(--muted);max-width:650px}.contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.footer{padding:28px 0 45px;color:var(--muted);font-size:.83rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#fff}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.top-button{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#17132cdd;color:#fff;cursor:pointer;z-index:15;backdrop-filter:blur(12px)}.hidden{display:none!important}
-@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:65px;gap:12px}.hero-copy{max-width:760px}.orbital{min-height:350px}.orbital:before{width:310px}.orbital:after{width:280px}.stack-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.principles{grid-template-columns:repeat(3,1fr)}.nav-links{gap:11px}.nav-links a{font-size:.78rem}}
-@media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 26px))}.nav-wrap{top:6px;padding-top:6px}.nav{padding:10px 12px}.nav-links{display:none}.nav-cta{padding:9px 12px;font-size:.8rem}.hero{min-height:auto;padding-top:68px;padding-bottom:34px}.hero h1{font-size:clamp(3.4rem,16vw,5.5rem)}.hero p{font-size:1rem}.mini-stats{gap:17px}.orbital{min-height:310px}.orbit-core{width:145px}.orbit-chip{font-size:.72rem;padding:8px 10px}.chip-a{left:0;top:10%}.chip-b{right:0;top:20%}.chip-c{left:0;bottom:9%}.chip-d{right:0;bottom:5%}.orbital:before{width:260px}.orbital:after{width:225px}.section{padding:54px 0}.section-head{display:block}.section-intro{margin-top:12px}.about-copy{padding:22px}.principles{grid-template-columns:1fr}.stack-grid{gap:10px}.stack-card{padding:16px;min-height:175px}.projects-grid,.cert-grid{grid-template-columns:1fr}.project-card{padding:21px;min-height:unset}.contact-box{padding:25px 20px}.footer{display:block}.footer span{display:block;margin-top:8px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMITVERSE | Amit Dorwekar — DevOps Engineer</title>
+    <meta name="description" content="Explore Amit Dorwekar's DevOps portfolio featuring AWS, Microsoft Azure, CI/CD automation, Docker, Kubernetes, Terraform, Jenkins, monitoring, and hands-on projects.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            900: '#030008',
+                            800: '#0a0314',
+                            700: '#130724',
+                            600: '#220b3b',
+                            500: '#3c1361'
+                        },
+                        neon: {
+                            cyan: '#00f0ff',
+                            magenta: '#ff007f',
+                            purple: '#9d00ff',
+                            violet: '#bf00ff',
+                            lime: '#39ff14',
+                            hotpink: '#ff2a85'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                        'aurora': 'aurora 15s ease infinite alternate',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'matrix': 'matrixRain 20s linear infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(2deg)' }
+                        },
+                        aurora: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                            '100%': { backgroundPosition: '0% 50%' }
+                        },
+                        glow: {
+                            '0%': { textShadow: '0 0 10px rgba(0,240,255,0.5), 0 0 20px rgba(157,0,255,0.3)' },
+                            '100%': { textShadow: '0 0 20px rgba(255,0,127,0.8), 0 0 40px rgba(0,240,255,0.5)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js CDN for Cosmic Orb & Particles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        /* Custom Psychedelic Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030008;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #9d00ff, #00f0ff);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ff007f, #39ff14);
+        }
+
+        /* Glassmorphism & Neon Shadows */
+        .glass-panel {
+            background: rgba(19, 7, 36, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(157, 0, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(3, 0, 8, 0.37), inset 0 0 20px rgba(0, 240, 255, 0.05);
+        }
+        .glass-panel:hover {
+            border-color: rgba(0, 240, 255, 0.5);
+            box-shadow: 0 12px 40px 0 rgba(157, 0, 255, 0.3), inset 0 0 25px rgba(255, 0, 127, 0.1);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+        }
+        .neon-glow-magenta {
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.4);
+        }
+        .neon-border {
+            position: relative;
+        }
+        .neon-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #00f0ff, #ff007f, #9d00ff, #39ff14);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.5;
+            filter: blur(4px);
+            transition: opacity 0.3s ease;
+        }
+        .neon-border:hover::after {
+            opacity: 1;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00f0ff 0%, #ff007f 50%, #9d00ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-aurora {
+            background: linear-gradient(135deg, #39ff14 0%, #00f0ff 33%, #ff007f 66%, #bf00ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Canvas Background */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
 </head>
-<body>
-<div class="universe" aria-hidden="true"><div class="blob one"></div><div class="blob two"></div><div class="blob three"></div></div><div class="stars" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-<div class="nav-wrap wrap"><nav class="nav" aria-label="Main navigation"><a class="brand" href="#home">AMIT<span>VERSE</span> ✦</a><div class="nav-links"><a href="#about">About</a><a href="#stack">Tech stack</a><a href="#projects">Projects</a><a href="#certifications">Certification</a></div><a class="nav-cta" href="#contact">Connect ↗</a></nav></div>
-<main id="home" class="wrap">
-<section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> DevOps / Cloud Engineer · Pune, India</div><h1>Building<br><span class="gradient-text">beyond</span><br>the ordinary.</h1><p>I build, automate, and troubleshoot cloud infrastructure and CI/CD workflows — turning ideas into repeatable deployments, one pipeline at a time.</p><div class="hero-actions"><a class="btn primary" href="#projects">Explore my projects <span>↘</span></a><a class="btn ghost" href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="btn ghost" href="https://www.linkedin.com/in/amit-dorwekar-6a33a8393" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div><div class="mini-stats"><div><strong>CI/CD</strong>Automated workflows</div><div><strong>Cloud + IaC</strong>Repeatable infrastructure</div><div><strong>Observe</strong>Monitor & troubleshoot</div></div></div><div class="orbital" aria-label="Abstract animated cosmic orb with DevOps technology labels"><div class="orbit-core"><span>BUILD<br>∞<br>DEPLOY</span></div><div class="orbit-chip chip-a">☁️ <b>AWS</b> / Cloud</div><div class="orbit-chip chip-b">◈ <b>Kubernetes</b></div><div class="orbit-chip chip-c">⌘ <b>Terraform</b></div><div class="orbit-chip chip-d">✳ <b>CI/CD</b></div></div></section>
-<section id="about" class="section reveal"><div class="section-head"><div><div class="kicker">01 / About me</div><h2>Curious by nature.<br>Hands-on by choice.</h2></div><p class="section-intro">I learn by building real systems, breaking things safely, tracing the cause, and making the workflow more reliable.</p></div><div class="about-grid"><article class="glass about-copy"><p>I'm a DevOps / Cloud Engineer focused on building practical, production-style cloud and automation solutions. I work with AWS, Jenkins, Docker, Kubernetes, Terraform, Ansible, GitHub, and Linux to build CI/CD pipelines and automate application deployments.</p><p>My approach is hands-on — I learn by building infrastructure, configuring services, deploying applications, and troubleshooting issues across CI/CD, containers, Kubernetes, networking, security, and cloud infrastructure.</p><p>I enjoy turning manual deployment processes into reliable, automated workflows and continuously improving my understanding of DevOps, Cloud, CI/CD, Infrastructure as Code, and Kubernetes.</p><p class="quote">“Build it. Automate it. Observe it. Improve it.”</p></article><div class="principles"><article class="glass principle"><div class="icon">🌀</div><h3>Automate the repeatable</h3><p>Reduce manual steps with pipelines and Infrastructure as Code.</p></article><article class="glass principle"><div class="icon">🧩</div><h3>Troubleshoot with evidence</h3><p>Use logs, events, health checks, and clear debugging steps.</p></article><article class="glass principle"><div class="icon">🌌</div><h3>Keep learning</h3><p>Build practical projects and deepen cloud-native skills.</p></article></div></div></section>
-<section id="stack" class="section reveal"><div class="section-head"><div><div class="kicker">02 / The toolbox</div><h2>Tools I build with.</h2></div><p class="section-intro">A practical stack for shipping applications, managing infrastructure, and understanding what's happening after deployment.</p></div><div class="stack-grid"><article class="glass stack-card"><div class="stack-icon">☁️</div><h3>Cloud & infrastructure</h3><div class="pills"><span class="pill">AWS EC2</span><span class="pill">S3</span><span class="pill">IAM</span><span class="pill">VPC</span><span class="pill">ALB</span><span class="pill">EKS</span><span class="pill">CloudWatch</span><span class="pill">Cost Explorer</span><span class="pill">Azure fundamentals</span></div></article><article class="glass stack-card"><div class="stack-icon">🔄</div><h3>DevOps & delivery</h3><div class="pills"><span class="pill">Jenkins</span><span class="pill">GitHub Actions</span><span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">Maven</span><span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">K3s</span><span class="pill">Helm</span><span class="pill">Traefik</span></div></article><article class="glass stack-card"><div class="stack-icon">📊</div><h3>Monitoring, quality & security</h3><div class="pills"><span class="pill">Prometheus</span><span class="pill">Grafana</span><span class="pill">CloudWatch</span><span class="pill">SonarQube</span><span class="pill">Trivy</span><span class="pill">Nexus</span><span class="pill">JUnit</span><span class="pill">IAM roles</span></div></article><article class="glass stack-card"><div class="stack-icon">💻</div><h3>Code, automation & OS</h3><div class="pills"><span class="pill">Terraform</span><span class="pill">Ansible</span><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Java basics</span><span class="pill">Linux</span><span class="pill">Ubuntu</span></div></article></div></section>
-<section id="projects" class="section reveal"><div class="section-head"><div><div class="kicker">03 / Selected builds</div><h2>Ideas turned into systems.</h2></div><p class="section-intro">Project work across CI/CD, Kubernetes, cloud infrastructure, and automation. Select a filter to explore a focus area.</p></div><div class="project-tools" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="cicd">CI/CD</button><button class="filter" data-filter="cloud">Cloud & Terraform</button><button class="filter" data-filter="automation">Automation</button></div><div class="projects-grid">
-<article class="glass project-card" data-category="cicd" style="--glow:#ff48c4"><div class="project-top"><div><div class="project-number">PROJECT 01 / PIPELINE</div><h3>3-Tier Java CI/CD Pipeline</h3></div><span aria-hidden="true">🔐</span></div><p>A hands-on Java/Maven application workflow spanning automated tests, code-quality analysis, Docker image creation, private registry storage, Kubernetes deployment, and verification.</p><div class="flow"><span>GitHub</span><i>→</i><span>Jenkins</span><i>→</i><span>Maven / JUnit</span><i>→</i><span>SonarQube</span><i>→</i><span>Docker + Nexus</span><i>→</i><span>K3s</span></div><ul><li>Integrated Jenkins with SonarQube and Nexus Docker Registry.</li><li>Deployed to Kubernetes/K3s and configured deployment verification.</li><li>Practiced debugging image pulls, pod failures, credentials, networking, and EC2 security groups.</li></ul><div class="pills"><span class="pill">Java / Maven</span><span class="pill">Jenkins</span><span class="pill">SonarQube</span><span class="pill">Nexus</span><span class="pill">Docker</span><span class="pill">Prometheus / Grafana</span></div><a class="project-link" href="https://github.com/amitd1299/java-3tier-devops" target="_blank" rel="noopener noreferrer">View repository ↗</a></article>
-<article class="glass project-card" data-category="cicd" style="--glow:#50b8ff"><div class="project-top"><div><div class="project-number">PROJECT 02 / PLATFORM</div><h3>OpsPilot — End-to-End DevOps CI/CD Platform</h3></div><span aria-hidden="true">🚀</span></div><p>An integrated DevOps environment connecting source control, build automation, container image management, and Kubernetes deployment on AWS EC2.</p><div class="flow"><span>GitHub</span><i>→</i><span>Jenkins</span><i>→</i><span>Docker</span><i>→</i><span>Nexus</span><i>→</i><span>Kubernetes</span></div><ul><li>Used Terraform for AWS infrastructure and Linux environment setup.</li><li>Added application health checks and deployment verification.</li><li>Practiced recovery and troubleshooting across Jenkins, Docker, Nexus, K3s, containerd, networking, and EC2.</li></ul><div class="pills"><span class="pill">AWS EC2</span><span class="pill">Terraform</span><span class="pill">Jenkins</span><span class="pill">Docker</span><span class="pill">K3s</span><span class="pill">Python</span></div><a class="project-link" href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer">Explore GitHub projects ↗</a></article>
-<article class="glass project-card" data-category="cloud automation" style="--glow:#c7ff5e"><div class="project-top"><div><div class="project-number">PROJECT 03 / INFRASTRUCTURE</div><h3>DevOps Infrastructure & CI/CD Practice</h3></div><span aria-hidden="true">🏗️</span></div><p>Hands-on practice focused on automating cloud infrastructure and deployment workflows across AWS and containerized workloads.</p><ul><li>Worked with VPC networking, EC2, and Security Groups.</li><li>Practiced Terraform provisioning, Jenkins pipelines, and Docker builds.</li><li>Explored Kubernetes deployments, Ansible automation, and Prometheus/Grafana monitoring.</li></ul><div class="pills"><span class="pill">Terraform</span><span class="pill">AWS</span><span class="pill">Jenkins</span><span class="pill">Ansible</span><span class="pill">Monitoring</span></div><a class="project-link" href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer">Explore GitHub projects ↗</a></article>
-<article class="glass project-card" data-category="cloud" style="--glow:#5effe0"><div class="project-top"><div><div class="project-number">PROJECT 04 / INFRA AS CODE</div><h3>Terraform AWS Infrastructure</h3></div><span aria-hidden="true">☁️</span></div><p>Infrastructure-as-Code practice for defining repeatable AWS resources with Terraform.</p><ul><li>Practiced VPC configuration and public/private networking concepts.</li><li>Provisioned EC2 and configured Security Groups.</li><li>Worked with variables, outputs, reusable structure, and remote-state concepts including S3 and DynamoDB.</li></ul><div class="pills"><span class="pill">Terraform</span><span class="pill">AWS VPC</span><span class="pill">EC2</span><span class="pill">S3</span><span class="pill">DynamoDB</span></div><a class="project-link" href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer">Explore GitHub projects ↗</a></article>
-<article class="glass project-card" data-category="automation" style="--glow:#ff9b58"><div class="project-top"><div><div class="project-number">PROJECT 05 / CONFIGURATION</div><h3>Ansible Infrastructure Automation</h3></div><span aria-hidden="true">🔧</span></div><p>Configuration-management practice for repeatable server setup and service configuration.</p><ul><li>Practiced remote server configuration and role-based playbooks.</li><li>Automated Docker installation and Nginx configuration tasks.</li><li>Used reusable Ansible roles and idempotent automation patterns.</li></ul><div class="pills"><span class="pill">Ansible</span><span class="pill">AWS EC2</span><span class="pill">Docker</span><span class="pill">Nginx</span></div><a class="project-link" href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer">Explore GitHub projects ↗</a></article>
-<article class="glass project-card" data-category="cicd automation" style="--glow:#a779ff"><div class="project-top"><div><div class="project-number">PROJECT 06 / DELIVERY</div><h3>Multi-Environment CI/CD Pipeline</h3></div><span aria-hidden="true">🌈</span></div><p>A practice workflow exploring how a single pipeline can move containerized changes through multiple environments with controlled promotion.</p><div class="flow"><span>GitHub</span><i>→</i><span>Jenkins</span><i>→</i><span>Docker Build</span><i>→</i><span>Dev</span><i>→</i><span>Staging</span><i>→</i><span>Production</span></div><ul><li>Practiced Jenkins pipelines and GitHub integration.</li><li>Explored environment-specific deployment steps and manual approval gates.</li><li>Worked with Docker builds and AWS EC2 deployment concepts.</li></ul><div class="pills"><span class="pill">Jenkins</span><span class="pill">Docker</span><span class="pill">AWS EC2</span><span class="pill">GitHub</span></div><a class="project-link" href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer">Explore GitHub projects ↗</a></article>
-</div></section>
-<section id="certifications" class="section reveal"><div class="section-head"><div><div class="kicker">04 / Proof of learning</div><h2>Certification.</h2></div><p class="section-intro">A cloud foundation backed by structured learning and hands-on project practice.</p></div><div class="cert-grid"><article class="glass cert"><div class="cert-mark">🏅</div><div><h3>AWS Certified Solutions Architect – Associate</h3><p>Amazon Web Services · Certification earned</p></div></article><article class="glass cert"><div class="cert-mark">🧪</div><div><h3>Learn by building</h3><p>Practical projects across CI/CD, AWS infrastructure, Kubernetes, IaC, and monitoring.</p></div></article></div></section>
-<section id="contact" class="section reveal"><div class="glass contact-box"><div class="kicker">05 / Let's connect</div><h2>Have a pipeline to improve or infrastructure to build?</h2><p>I'm interested in DevOps and Cloud opportunities where I can contribute hands-on skills, learn from experienced engineers, and help make delivery workflows more reliable.</p><div class="contact-links"><a class="btn primary" href="https://www.linkedin.com/in/amit-dorwekar-6a33a8393" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="btn ghost" href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a></div></div></section>
-<footer class="footer"><div>© <span id="year"></span> <a href="#home">AMITVERSE</a> · Crafted from curiosity and code.</div><div>Cosmic mind. Practical engineering. <a href="#home">Back to top ↑</a></div></footer>
-</main><button class="top-button" id="topButton" aria-label="Back to top" title="Back to top">↑</button>
-<script>
-// Project filters
-const filters=[...document.querySelectorAll('.filter')];
-const cards=[...document.querySelectorAll('.project-card')];
-filters.forEach(button=>button.addEventListener('click',()=>{filters.forEach(b=>b.classList.toggle('active',b===button));const chosen=button.dataset.filter;cards.forEach(card=>{const cats=card.dataset.category.split(' ');card.classList.toggle('hidden',chosen!=='all'&&!cats.includes(chosen));});}));
-// Subtle reveal-on-scroll; content remains visible when reduced motion is requested.
-const revealItems=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});revealItems.forEach(item=>observer.observe(item));}else{revealItems.forEach(item=>item.classList.add('visible'));}
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('topButton').addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
-</script>
+<body class="bg-cosmic-900 text-gray-100 font-sans antialiased overflow-x-hidden selection:bg-neon-magenta selection:text-white">
+
+    <!-- Background Psychedelic Canvas (Three.js Starfield & Nebula) -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Floating Glassmorphism Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto glass-panel rounded-2xl px-6 py-3 flex items-center justify-between border border-neon-purple/30">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neon-cyan via-neon-magenta to-neon-purple p-0.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <div class="w-full h-full bg-cosmic-900 rounded-[10px] flex items-center justify-center">
+                        <span class="text-neon-cyan font-black text-lg tracking-tighter">A</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider text-gradient">AMITVERSE</span>
+                    <span class="block text-[10px] text-neon-cyan/80 tracking-widest uppercase font-mono">DevOps Universe</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-6">
+                <a href="#home" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">Home</a>
+                <a href="#about" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">About</a>
+                <a href="#skills" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">Skills</a>
+                <a href="#projects" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">Projects</a>
+                <a href="#pipeline" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">Pipeline</a>
+                <a href="#cloud" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">Cloud</a>
+                <a href="#monitoring" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">Observability</a>
+                <a href="#terminal" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all"><i class="fa-solid fa-terminal mr-1 text-neon-lime"></i> Terminal</a>
+                <a href="#contact" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-neon-cyan hover:bg-neon-purple/10 transition-all">Contact</a>
+            </nav>
+
+            <!-- Quick Action / GitHub link -->
+            <div class="hidden lg:flex items-center space-x-3">
+                <a href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-neon-purple to-neon-magenta text-white font-semibold text-xs tracking-wider uppercase hover:opacity-95 transition-all neon-glow-magenta flex items-center space-x-2">
+                    <i class="fa-brands fa-github text-base"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-neon-cyan focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2 max-w-7xl mx-auto glass-panel rounded-2xl p-6 border border-neon-purple/30 flex flex-col space-y-3">
+            <a href="#home" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Home</a>
+            <a href="#about" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">About</a>
+            <a href="#skills" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Skills</a>
+            <a href="#projects" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Projects</a>
+            <a href="#pipeline" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Pipeline</a>
+            <a href="#cloud" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Cloud</a>
+            <a href="#monitoring" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Observability</a>
+            <a href="#terminal" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Terminal</a>
+            <a href="#contact" class="mobile-nav-link px-4 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-neon-purple/20 hover:text-neon-cyan">Contact</a>
+            <a href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-xl bg-gradient-to-r from-neon-purple to-neon-magenta text-white font-semibold text-center uppercase tracking-wider">
+                <i class="fa-brands fa-github mr-2"></i> GitHub Profile
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-4 sm:px-8 overflow-hidden">
+        <!-- Aurora background effect -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none bg-gradient-to-r from-neon-purple via-neon-magenta to-neon-cyan animate-aurora filter blur-[120px]"></div>
+        
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Hero Info -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6 text-left">
+                <!-- Small Tag -->
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border border-neon-cyan/40 text-neon-cyan text-xs font-mono uppercase tracking-widest neon-glow-cyan">
+                    <span class="w-2 h-2 rounded-full bg-neon-cyan animate-ping"></span>
+                    <span>Cloud Engineering • Automation • Innovation</span>
+                </div>
+
+                <!-- Giant Name -->
+                <div class="space-y-2">
+                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-none text-gradient animate-glow">
+                        AMIT<br>DORWEKAR
+                    </h1>
+                    <div class="text-xl sm:text-2xl lg:text-3xl font-bold font-mono text-neon-cyan tracking-wider flex items-center space-x-3 pt-2">
+                        <span>DevOps Engineer</span>
+                        <span class="text-neon-magenta">|</span>
+                        <span class="text-gray-400 text-base font-sans font-normal">Pune, India</span>
+                    </div>
+                </div>
+
+                <!-- Tech Line -->
+                <div class="w-full glass-panel p-4 rounded-2xl border border-neon-purple/30 font-mono text-xs sm:text-sm text-gray-300 flex flex-wrap gap-2 items-center">
+                    <span class="text-neon-lime font-bold">STACK:</span>
+                    <span class="px-2 py-1 rounded bg-cosmic-700 text-neon-cyan">AWS</span>
+                    <span>•</span>
+                    <span class="px-2 py-1 rounded bg-cosmic-700 text-neon-cyan">MICROSOFT AZURE</span>
+                    <span>•</span>
+                    <span class="px-2 py-1 rounded bg-cosmic-700 text-neon-magenta">DOCKER</span>
+                    <span>•</span>
+                    <span class="px-2 py-1 rounded bg-cosmic-700 text-neon-magenta">KUBERNETES</span>
+                    <span>•</span>
+                    <span class="px-2 py-1 rounded bg-cosmic-700 text-neon-purple">TERRAFORM</span>
+                    <span>•</span>
+                    <span class="px-2 py-1 rounded bg-cosmic-700 text-neon-cyan">JENKINS</span>
+                </div>
+
+                <!-- Introduction -->
+                <p class="text-base sm:text-lg text-gray-300 max-w-2xl leading-relaxed">
+                    “I build and explore automated CI/CD pipelines, cloud infrastructure, containerized applications, and monitoring solutions through hands-on DevOps projects.”
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-purple text-cosmic-900 font-extrabold text-sm uppercase tracking-wider hover:scale-105 transition-all neon-glow-cyan flex items-center space-x-3 shadow-xl">
+                        <span>Explore Projects</span>
+                        <i class="fa-solid fa-arrow-down animate-bounce"></i>
+                    </a>
+                    <a href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-2xl glass-panel border border-neon-magenta/50 text-white font-extrabold text-sm uppercase tracking-wider hover:bg-neon-magenta/20 hover:scale-105 transition-all neon-glow-magenta flex items-center space-x-3">
+                        <i class="fa-brands fa-github text-lg"></i>
+                        <span>GitHub Profile</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Hero 3D Cosmic Orb Canvas -->
+            <div class="lg:col-span-5 flex items-center justify-center relative">
+                <div class="w-full h-[400px] sm:h-[500px] relative flex items-center justify-center">
+                    <!-- Glowing Backing Backdrop -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-neon-purple/30 via-neon-magenta/20 to-neon-cyan/30 rounded-full filter blur-[60px] animate-pulse-slow"></div>
+                    <!-- Three.js Orb Container -->
+                    <div id="hero-orb-container" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+                    <!-- Floating Overlay Badge -->
+                    <div class="absolute bottom-4 right-4 glass-panel px-4 py-2 rounded-xl border border-neon-cyan/40 text-xs font-mono text-neon-cyan animate-float">
+                        <i class="fa-solid fa-atom mr-2 text-neon-magenta animate-spin-slow"></i> Interactive Cosmic Core
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NAVIGATION BAR SCROLL DETECTOR SCRIPT -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-24 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-neon-cyan font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-cyan/30">Who I Am</span>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">BEYOND THE TERMINAL</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-magenta mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Bio Card -->
+                <div class="lg:col-span-7 glass-panel p-8 sm:p-10 rounded-3xl border border-neon-purple/30 relative overflow-hidden group">
+                    <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-neon-purple/10 rounded-full blur-3xl group-hover:bg-neon-cyan/20 transition-all"></div>
+                    <p class="text-lg sm:text-xl text-gray-200 leading-relaxed font-light mb-6">
+                        “I'm <strong class="text-neon-cyan font-semibold">Amit Dorwekar</strong>, a DevOps Engineer focused on cloud infrastructure, CI/CD automation, containerization, infrastructure as code, and monitoring. Through hands-on projects, I explore how applications move from source code to deployment and how infrastructure can be automated, monitored, and improved.”
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Based in <strong class="text-white">Pune, Maharashtra, India</strong>, I combine rigorous technical fundamentals with a passion for building reliable automated delivery pipelines and robust cloud environments across leading hyperscalers.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1.5 rounded-xl bg-cosmic-700/80 border border-neon-cyan/30 text-neon-cyan text-xs font-mono">Cloud Infrastructure</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-cosmic-700/80 border border-neon-magenta/30 text-neon-magenta text-xs font-mono">CI/CD Pipelines</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-cosmic-700/80 border border-neon-purple/30 text-purple-300 text-xs font-mono">Kubernetes Orchestration</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-cosmic-700/80 border border-neon-lime/30 text-neon-lime text-xs font-mono">Observability</span>
+                    </div>
+                </div>
+
+                <!-- Key Focus Areas Cards -->
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-panel p-6 rounded-2xl border border-neon-cyan/20 hover:border-neon-cyan/60 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Cloud & IaC</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">AWS, Microsoft Azure, and Terraform for reproducible, scalable infrastructure.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl border border-neon-magenta/20 hover:border-neon-magenta/60 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-neon-magenta/10 flex items-center justify-center text-neon-magenta text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-infinity"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">CI/CD Automation</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Jenkins, GitHub Actions, and Nexus for seamless build and artifact delivery.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl border border-neon-purple/20 hover:border-neon-purple/60 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-neon-purple/10 flex items-center justify-center text-neon-purple text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Containers & K8s</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Docker, Kubernetes, and K3s for container orchestration and microservice deployment.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl border border-neon-lime/20 hover:border-neon-lime/60 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-neon-lime/10 flex items-center justify-center text-neon-lime text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Monitoring</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Prometheus, Grafana, and CloudWatch for deep metrics and proactive observability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section id="skills" class="py-24 px-4 sm:px-8 relative bg-cosmic-800/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-neon-magenta font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-magenta/30">Expertise Ecosystem</span>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">MY TECHNOLOGY UNIVERSE</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-neon-magenta to-neon-cyan mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Category 1: Cloud Platforms -->
+                <div class="glass-panel p-6 rounded-3xl border border-neon-cyan/30 hover:border-neon-cyan transition-all group">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan text-lg">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">Cloud Platforms</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-cosmic-900/60 border border-neon-cyan/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-brands fa-aws text-2xl text-amber-400"></i>
+                                <span class="font-semibold text-gray-200">Amazon Web Services (AWS)</span>
+                            </div>
+                            <span class="text-xs font-mono text-neon-cyan">EC2, S3, IAM, VPC</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-cosmic-900/60 border border-neon-cyan/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-brands fa-microsoft text-2xl text-neon-cyan"></i>
+                                <span class="font-semibold text-gray-200">Microsoft Azure</span>
+                            </div>
+                            <span class="text-xs font-mono text-neon-cyan">VMs, Entra ID, Storage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Containers & Orchestration -->
+                <div class="glass-panel p-6 rounded-3xl border border-neon-magenta/30 hover:border-neon-magenta transition-all group">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-neon-magenta/10 flex items-center justify-center text-neon-magenta text-lg">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">Containers & Orchestration</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-cosmic-900/60 border border-neon-magenta/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-brands fa-docker text-2xl text-sky-400"></i>
+                                <span class="font-semibold text-gray-200">Docker</span>
+                            </div>
+                            <span class="text-xs font-mono text-neon-magenta">Containerization</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-cosmic-900/60 border border-neon-magenta/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-dharmachakra text-2xl text-blue-500"></i>
+                                <span class="font-semibold text-gray-200">Kubernetes & K3s</span>
+                            </div>
+                            <span class="text-xs font-mono text-neon-magenta">Orchestration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: CI/CD & Version Control -->
+                <div class="glass-panel p-6 rounded-3xl border border-neon-purple/30 hover:border-neon-purple transition-all group">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-neon-purple/10 flex items-center justify-center text-neon-purple text-lg">
+                            <i class="fa-solid fa-code-merge"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">CI/CD & Version Control</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-neon-purple/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-gears text-xl text-red-400"></i>
+                                <span class="font-semibold text-gray-200 text-sm">Jenkins</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-purple-300">Automation</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-neon-purple/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-brands fa-github text-xl text-white"></i>
+                                <span class="font-semibold text-gray-200 text-sm">GitHub Actions & Git</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-purple-300">SCM / CI</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-neon-purple/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-box text-xl text-orange-400"></i>
+                                <span class="font-semibold text-gray-200 text-sm">Maven</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-purple-300">Builds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: IaC & Automation -->
+                <div class="glass-panel p-6 rounded-3xl border border-neon-lime/30 hover:border-neon-lime transition-all group">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-neon-lime/10 flex items-center justify-center text-neon-lime text-lg">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">IaC & Automation</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-neon-lime/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-cube text-xl text-indigo-400"></i>
+                                <span class="font-semibold text-gray-200 text-sm">Terraform</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-neon-lime">IaC</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-neon-lime/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-terminal text-xl text-red-500"></i>
+                                <span class="font-semibold text-gray-200 text-sm">Ansible & Bash</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-neon-lime">Config / Scripting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 5: Monitoring & Observability -->
+                <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 hover:border-amber-500 transition-all group">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-lg">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">Monitoring & Observability</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-amber-500/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-fire text-xl text-amber-500"></i>
+                                <span class="font-semibold text-gray-200 text-sm">Prometheus</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-amber-400">Metrics</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-amber-500/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-chart-pie text-xl text-cyan-400"></i>
+                                <span class="font-semibold text-gray-200 text-sm">Grafana & CloudWatch</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-amber-400">Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 6: Quality, Artifacts & OS -->
+                <div class="glass-panel p-6 rounded-3xl border border-sky-500/30 hover:border-sky-500 transition-all group">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-lg">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">Quality, Artifacts & OS</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-sky-500/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-magnifying-glass-chart text-xl text-blue-400"></i>
+                                <span class="font-semibold text-gray-200 text-sm">SonarQube & Nexus</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-sky-400">Quality / Registry</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 rounded-xl bg-cosmic-900/60 border border-sky-500/20">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-brands fa-linux text-xl text-amber-300"></i>
+                                <span class="font-semibold text-gray-200 text-sm">Linux, Python, Java</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-sky-400">Core OS / Lang</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="py-24 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-neon-cyan font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-cyan/30">Practical Engineering</span>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">BUILT IN THE AMITVERSE</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- PROJECT 01 -->
+                <div class="glass-panel p-8 rounded-3xl border border-neon-cyan/30 hover:border-neon-cyan transition-all flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-neon-cyan/10 rounded-full blur-2xl group-hover:bg-neon-cyan/20 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-lg bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/30">Project 01</span>
+                            <span class="text-xs font-mono text-gray-400">End-to-End Platform</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-3 group-hover:text-neon-cyan transition-colors">OpsPilot: End-to-End DevOps CI/CD Platform</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            “An end-to-end DevOps platform integrating source control, CI/CD automation, container image management, infrastructure provisioning, and Kubernetes deployment.”
+                        </p>
+                        <div class="mb-6 p-4 rounded-2xl bg-cosmic-900/60 border border-neon-cyan/20">
+                            <span class="block text-[11px] font-mono text-neon-cyan mb-2 uppercase tracking-wider">Workflow:</span>
+                            <div class="text-xs font-mono text-gray-300 leading-loose">
+                                GitHub → Jenkins → Docker Build → Nexus Repository → Kubernetes / K3s
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-neon-cyan text-xs font-mono">AWS EC2</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-neon-cyan text-xs font-mono">Terraform</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-neon-magenta text-xs font-mono">Jenkins</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-neon-magenta text-xs font-mono">Docker</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-purple-300 text-xs font-mono">Nexus</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-purple-300 text-xs font-mono">K3s</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-neon-purple/20">
+                        <a href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-neon-cyan to-neon-purple text-cosmic-900 font-extrabold text-xs uppercase tracking-wider text-center hover:opacity-90 transition-all flex items-center justify-center space-x-2">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT 02 -->
+                <div class="glass-panel p-8 rounded-3xl border border-neon-magenta/30 hover:border-neon-magenta transition-all flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-neon-magenta/10 rounded-full blur-2xl group-hover:bg-neon-magenta/20 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-lg bg-neon-magenta/10 text-neon-magenta border border-neon-magenta/30">Project 02</span>
+                            <span class="text-xs font-mono text-gray-400">3-Tier Pipeline</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-3 group-hover:text-neon-magenta transition-colors">Java 3-Tier Application CI/CD Pipeline</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            “A Java application delivery project integrating automated builds, testing, code quality analysis, container image publishing, Kubernetes deployment, and monitoring.”
+                        </p>
+                        <div class="mb-6 p-4 rounded-2xl bg-cosmic-900/60 border border-neon-magenta/20">
+                            <span class="block text-[11px] font-mono text-neon-magenta mb-2 uppercase tracking-wider">Pipeline & Monitoring:</span>
+                            <div class="text-xs font-mono text-gray-300 leading-loose">
+                                GitHub → Jenkins → Maven/JUnit → SonarQube → Docker → Nexus → K3s<br>
+                                <span class="text-neon-lime">Prometheus → Grafana Dashboards</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-amber-400 text-xs font-mono">Java/Maven</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-neon-magenta text-xs font-mono">Jenkins</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-neon-magenta text-xs font-mono">SonarQube</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-cyan-400 text-xs font-mono">Prometheus</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-cyan-400 text-xs font-mono">Grafana</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-neon-purple/20">
+                        <a href="https://github.com/amitd1299/java-3tier-devops" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-neon-magenta to-neon-purple text-white font-extrabold text-xs uppercase tracking-wider text-center hover:opacity-90 transition-all flex items-center justify-center space-x-2">
+                            <span>View Repository</span>
+                            <i class="fa-brands fa-github text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT 03 -->
+                <div class="glass-panel p-8 rounded-3xl border border-neon-purple/30 hover:border-neon-purple transition-all flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-neon-purple/10 rounded-full blur-2xl group-hover:bg-neon-purple/20 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-lg bg-neon-purple/10 text-purple-300 border border-neon-purple/30">Project 03</span>
+                            <span class="text-xs font-mono text-gray-400">Cloud Cost Automation</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-3 group-hover:text-purple-300 transition-colors">AWS Cost Monitor Jenkins Pipeline</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            “A cost-monitoring automation project that retrieves and analyzes AWS cost information through a Jenkins pipeline using IAM role-based authentication instead of static AWS credentials.”
+                        </p>
+                        <div class="mb-6 p-4 rounded-2xl bg-cosmic-900/60 border border-neon-purple/20">
+                            <span class="block text-[11px] font-mono text-purple-300 mb-2 uppercase tracking-wider">Workflow:</span>
+                            <div class="text-xs font-mono text-gray-300 leading-loose">
+                                Jenkins → IAM Role Auth → AWS Cost Explorer API → Python Analysis → Cost Report
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-amber-400 text-xs font-mono">AWS Cost Explorer</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-cyan-400 text-xs font-mono">Python</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-neon-magenta text-xs font-mono">Jenkins</span>
+                            <span class="px-2.5 py-1 rounded-md bg-cosmic-700 text-purple-300 text-xs font-mono">IAM Roles</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-4 border-t border-neon-purple/20">
+                        <a href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-neon-purple to-neon-cyan text-cosmic-900 font-extrabold text-xs uppercase tracking-wider text-center hover:opacity-90 transition-all flex items-center justify-center space-x-2">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE DEVOPS PIPELINE VISUALIZATION -->
+    <section id="pipeline" class="py-24 px-4 sm:px-8 relative bg-cosmic-800/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-neon-lime font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-lime/30">End-to-End Automation Flow</span>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">FROM CODE TO CLOUD</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-neon-lime to-neon-cyan mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-400 text-sm mt-4 max-w-xl mx-auto">Hover or tap each pipeline stage to inspect the technical operations performed across the delivery lifecycle.</p>
+            </div>
+
+            <!-- Pipeline Grid / Nodes -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+                <!-- Stage 1 -->
+                <div class="glass-panel p-6 rounded-2xl border border-neon-cyan/30 hover:border-neon-cyan transition-all cursor-pointer group" onclick="showPipelineDetail('source')">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-neon-cyan font-bold">01 — STAGE</span>
+                        <i class="fa-brands fa-git-alt text-2xl text-orange-400 group-hover:scale-125 transition-transform"></i>
+                    </div>
+                    <h3 class="font-extrabold text-white text-lg mb-1">Source Control</h3>
+                    <p class="text-xs text-gray-400">GitHub repositories, branch protection, and commit tracking.</p>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="glass-panel p-6 rounded-2xl border border-neon-magenta/30 hover:border-neon-magenta transition-all cursor-pointer group" onclick="showPipelineDetail('build')">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-neon-magenta font-bold">02 — STAGE</span>
+                        <i class="fa-solid fa-gears text-2xl text-red-400 group-hover:scale-125 transition-transform"></i>
+                    </div>
+                    <h3 class="font-extrabold text-white text-lg mb-1">Build & Test</h3>
+                    <p class="text-xs text-gray-400">Jenkins automated jobs, Maven compilation, and JUnit test validation.</p>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="glass-panel p-6 rounded-2xl border border-neon-purple/30 hover:border-neon-purple transition-all cursor-pointer group" onclick="showPipelineDetail('quality')">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-purple-300 font-bold">03 — STAGE</span>
+                        <i class="fa-solid fa-shield-halved text-2xl text-blue-400 group-hover:scale-125 transition-transform"></i>
+                    </div>
+                    <h3 class="font-extrabold text-white text-lg mb-1">Code Quality</h3>
+                    <p class="text-xs text-gray-400">SonarQube static analysis, bug detection, and security hotspots check.</p>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="glass-panel p-6 rounded-2xl border border-neon-lime/30 hover:border-neon-lime transition-all cursor-pointer group" onclick="showPipelineDetail('container')">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-neon-lime font-bold">04 — STAGE</span>
+                        <i class="fa-brands fa-docker text-2xl text-sky-400 group-hover:scale-125 transition-transform"></i>
+                    </div>
+                    <h3 class="font-extrabold text-white text-lg mb-1">Containerization</h3>
+                    <p class="text-xs text-gray-400">Docker image creation, multi-stage builds, and layer optimization.</p>
+                </div>
+
+                <!-- Stage 5 -->
+                <div class="glass-panel p-6 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all cursor-pointer group" onclick="showPipelineDetail('artifact')">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-amber-400 font-bold">05 — STAGE</span>
+                        <i class="fa-solid fa-box text-2xl text-orange-400 group-hover:scale-125 transition-transform"></i>
+                    </div>
+                    <h3 class="font-extrabold text-white text-lg mb-1">Artifact Management</h3>
+                    <p class="text-xs text-gray-400">Nexus Repository storage for versioned container images and build packages.</p>
+                </div>
+
+                <!-- Stage 6 -->
+                <div class="glass-panel p-6 rounded-2xl border border-blue-500/30 hover:border-blue-500 transition-all cursor-pointer group" onclick="showPipelineDetail('orchestration')">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-blue-400 font-bold">06 — STAGE</span>
+                        <i class="fa-solid fa-dharmachakra text-2xl text-blue-500 group-hover:scale-125 transition-transform"></i>
+                    </div>
+                    <h3 class="font-extrabold text-white text-lg mb-1">Orchestration</h3>
+                    <p class="text-xs text-gray-400">Kubernetes & K3s cluster deployments, pods, services, and ingress routing.</p>
+                </div>
+
+                <!-- Stage 7 -->
+                <div class="glass-panel p-6 rounded-2xl border border-emerald-500/30 hover:border-emerald-500 transition-all cursor-pointer group sm:col-span-2 lg:col-span-2" onclick="showPipelineDetail('observability')">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-emerald-400 font-bold">07 — STAGE</span>
+                        <i class="fa-solid fa-chart-line text-2xl text-emerald-400 group-hover:scale-125 transition-transform"></i>
+                    </div>
+                    <h3 class="font-extrabold text-white text-lg mb-1">Observability & Monitoring</h3>
+                    <p class="text-xs text-gray-400">Prometheus metrics scrapers and Grafana real-time telemetry dashboards.</p>
+                </div>
+            </div>
+
+            <!-- Pipeline Detail Box -->
+            <div id="pipeline-detail-box" class="mt-8 glass-panel p-6 sm:p-8 rounded-3xl border border-neon-cyan/40 text-center">
+                <h4 id="pipeline-title" class="text-xl font-black text-neon-cyan mb-2">Select a pipeline stage above to view technical details</h4>
+                <p id="pipeline-desc" class="text-gray-300 text-sm max-w-2xl mx-auto">Each stage represents a crucial pillar in modern automated cloud delivery pipelines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIPELINE SCRIPT -->
+    <script>
+        function showPipelineDetail(stage) {
+            const titleEl = document.getElementById('pipeline-title');
+            const descEl = document.getElementById('pipeline-desc');
+            const box = document.getElementById('pipeline-detail-box');
+            
+            box.classList.add('border-neon-magenta');
+            setTimeout(() => box.classList.remove('border-neon-magenta'), 500);
+
+            if (stage === 'source') {
+                titleEl.textContent = '01 — Source Control Management (GitHub)';
+                descEl.textContent = 'Developers push clean code changes to GitHub. Automated webhooks trigger downstream Jenkins CI/CD jobs upon merge or pull request events, ensuring traceability and version control.';
+            } else if (stage === 'build') {
+                titleEl.textContent = '02 — Build & Test (Jenkins, Maven, JUnit)';
+                descEl.textContent = 'Jenkins orchestrates the build lifecycle. Maven compiles Java code, packages artifacts, and executes JUnit automated test suites to catch regressions early in the pipeline.';
+            } else if (stage === 'quality') {
+                titleEl.textContent = '03 — Code Quality Analysis (SonarQube)';
+                descEl.textContent = 'SonarQube scans source code for code smells, vulnerabilities, duplication, and bug patterns, enforcing strict quality gates before containerization.';
+            } else if (stage === 'container') {
+                titleEl.textContent = '04 — Containerization (Docker)';
+                descEl.textContent = 'Applications and their exact runtime dependencies are encapsulated into immutable Docker containers using optimized Dockerfiles, ensuring environment consistency.';
+            } else if (stage === 'artifact') {
+                titleEl.textContent = '05 — Artifact Management (Nexus Repository)';
+                descEl.textContent = 'Built container images and release packages are securely pushed and stored in a private Nexus Repository manager for versioned artifact retrieval.';
+            } else if (stage === 'orchestration') {
+                titleEl.textContent = '06 — Orchestration (Kubernetes & K3s)';
+                descEl.textContent = 'Kubernetes or lightweight K3s clusters pull container images, managing auto-scaling, pod scheduling, health probes, and self-healing cloud deployments.';
+            } else if (stage === 'observability') {
+                titleEl.textContent = '07 — Observability (Prometheus & Grafana)';
+                descEl.textContent = 'Prometheus scrapes operational metrics from containers and nodes, while Grafana renders live visualization dashboards for CPU, memory, request latency, and cluster health.';
+            }
+        }
+    </script>
+
+    <!-- CLOUD UNIVERSE SECTION (AWS + MICROSOFT AZURE + TERRAFORM) -->
+    <section id="cloud" class="py-24 px-4 sm:px-8 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-neon-cyan font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-cyan/30">Multi-Cloud Engineering</span>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">TWO CLOUDS. ONE AUTOMATION MINDSET.</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-neon-cyan to-neon-magenta mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-400 text-sm mt-4 max-w-xl mx-auto">Exploring cloud infrastructure, automation, and reliable deployment workflows across AWS and Microsoft Azure.</p>
+            </div>
+
+            <!-- Dual Cloud Grid with Central IaC bridge -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- AWS Cloud Panel -->
+                <div class="lg:col-span-5 glass-panel p-8 rounded-3xl border border-amber-500/40 relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl"></div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-3xl">
+                            <i class="fa-brands fa-aws"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-white">AWS Cloud</h3>
+                            <span class="text-xs font-mono text-amber-400">Amazon Web Services</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                        Designing compute instances, private VPC networking, S3 storage buckets, IAM security policies, and cost monitoring solutions.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-amber-500/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-server text-amber-400"></i>
+                            <span>Amazon EC2</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-amber-500/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-database text-amber-400"></i>
+                            <span>Amazon S3</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-amber-500/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-id-card text-amber-400"></i>
+                            <span>IAM & Roles</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-amber-500/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-network-wired text-amber-400"></i>
+                            <span>VPC Networks</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-amber-500/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-eye text-amber-400"></i>
+                            <span>CloudWatch</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-amber-500/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-coins text-amber-400"></i>
+                            <span>Cost Explorer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Terraform IaC Bridge -->
+                <div class="lg:col-span-2 flex flex-col items-center justify-center space-y-4 my-4 lg:my-0">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-neon-cyan via-neon-magenta to-neon-purple p-0.5 flex items-center justify-center shadow-lg animate-pulse-slow">
+                        <div class="w-full h-full bg-cosmic-900 rounded-[14px] flex items-center justify-center">
+                            <i class="fa-solid fa-cube text-neon-cyan text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-xs font-mono uppercase tracking-widest text-neon-cyan font-bold block">Terraform IaC</span>
+                        <span class="text-[10px] text-gray-400 font-mono">Infrastructure as Code</span>
+                    </div>
+                </div>
+
+                <!-- Azure Cloud Panel -->
+                <div class="lg:col-span-5 glass-panel p-8 rounded-3xl border border-neon-cyan/40 relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-neon-cyan/10 rounded-full blur-3xl"></div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan text-3xl">
+                            <i class="fa-brands fa-microsoft"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-white">Microsoft Azure</h3>
+                            <span class="text-xs font-mono text-neon-cyan">Azure Cloud Platform</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                        Exploring virtual machine deployment, Azure virtual networks, storage accounts, Microsoft Entra ID authentication, and Azure Monitor.
+                    </p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-neon-cyan/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-desktop text-neon-cyan"></i>
+                            <span>Azure VMs</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-neon-cyan/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-hard-drive text-neon-cyan"></i>
+                            <span>Azure Storage</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-neon-cyan/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-shield text-neon-cyan"></i>
+                            <span>Virtual Network</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-neon-cyan/20 text-xs font-mono text-gray-200 flex items-center space-x-2">
+                            <i class="fa-solid fa-user-shield text-neon-cyan"></i>
+                            <span>Entra ID</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-cosmic-900/60 border border-neon-cyan/20 text-xs font-mono text-gray-200 flex items-center space-x-2 sm:col-span-2">
+                            <i class="fa-solid fa-chart-bar text-neon-cyan"></i>
+                            <span>Azure Monitor & Insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MONITORING AND OBSERVABILITY SECTION -->
+    <section id="monitoring" class="py-24 px-4 sm:px-8 relative bg-cosmic-800/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-neon-lime font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-lime/30">Telemetry & Metrics</span>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">SEE WHAT'S HAPPENING</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-neon-lime to-neon-cyan mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-400 text-sm mt-4 max-w-xl mx-auto">Monitoring and observability explored through hands-on DevOps projects using Prometheus and Grafana.</p>
+            </div>
+
+            <!-- Simulated Grafana Dashboard Panel -->
+            <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-neon-lime/40 relative">
+                <!-- Dashboard Top Bar -->
+                <div class="flex flex-wrap items-center justify-between pb-6 mb-6 border-b border-neon-purple/20 gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-3 h-3 rounded-full bg-neon-lime animate-ping"></div>
+                        <span class="font-bold text-white text-lg font-mono">PROMETHEUS // K3S-CLUSTER-01</span>
+                    </div>
+                    <div class="flex items-center space-x-3 font-mono text-xs">
+                        <span class="px-3 py-1 rounded-lg bg-cosmic-700 text-neon-lime border border-neon-lime/30">Status: HEALTHY</span>
+                        <span class="px-3 py-1 rounded-lg bg-cosmic-700 text-gray-300">Refresh: 5s</span>
+                    </div>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="glass-panel p-5 rounded-2xl border border-neon-cyan/20">
+                        <span class="text-xs font-mono text-gray-400 block mb-1">CPU USAGE</span>
+                        <div class="text-3xl font-black text-neon-cyan font-mono" id="metric-cpu">34.2%</div>
+                        <div class="w-full bg-cosmic-900 h-2 rounded-full mt-3 overflow-hidden">
+                            <div class="bg-neon-cyan h-full transition-all duration-500" style="width: 34.2%" id="bar-cpu"></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-5 rounded-2xl border border-neon-magenta/20">
+                        <span class="text-xs font-mono text-gray-400 block mb-1">MEMORY ALLOCATED</span>
+                        <div class="text-3xl font-black text-neon-magenta font-mono" id="metric-mem">4.8 GB</div>
+                        <div class="w-full bg-cosmic-900 h-2 rounded-full mt-3 overflow-hidden">
+                            <div class="bg-neon-magenta h-full transition-all duration-500" style="width: 60%" id="bar-mem"></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-5 rounded-2xl border border-neon-lime/20">
+                        <span class="text-xs font-mono text-gray-400 block mb-1">REQ LATENCY (P99)</span>
+                        <div class="text-3xl font-black text-neon-lime font-mono" id="metric-lat">14.2 ms</div>
+                        <div class="w-full bg-cosmic-900 h-2 rounded-full mt-3 overflow-hidden">
+                            <div class="bg-neon-lime h-full transition-all duration-500" style="width: 25%" id="bar-lat"></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-5 rounded-2xl border border-purple-500/20">
+                        <span class="text-xs font-mono text-gray-400 block mb-1">ACTIVE PODS</span>
+                        <div class="text-3xl font-black text-purple-300 font-mono">12 / 12</div>
+                        <div class="w-full bg-cosmic-900 h-2 rounded-full mt-3 overflow-hidden">
+                            <div class="bg-purple-400 h-full w-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulated Live Logs & Terminal Output -->
+                <div class="glass-panel p-6 rounded-2xl border border-neon-purple/30 font-mono text-xs">
+                    <div class="flex items-center justify-between mb-3 text-gray-400 border-b border-gray-800 pb-2">
+                        <span>// LIVE CLUSTER EVENT LOGS</span>
+                        <span class="text-neon-lime">STREAMING ACTIVE</span>
+                    </div>
+                    <div class="space-y-2 text-gray-300 overflow-x-auto" id="live-log-container">
+                        <p><span class="text-neon-cyan">[18:35:01]</span> [INFO] Terraform state synchronized successfully across AWS & Azure providers.</p>
+                        <p><span class="text-neon-magenta">[18:35:06]</span> [SUCCESS] Jenkins CI/CD pipeline triggered for java-3tier-devops build #42.</p>
+                        <p><span class="text-neon-lime">[18:35:12]</span> [DEPLOY] Kubernetes K3s rolling update completed for microservice replica set.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MONITORING LIVE TICKER SCRIPT -->
+    <script>
+        setInterval(() => {
+            const cpu = (30 + Math.random() * 20).toFixed(1);
+            const lat = (10 + Math.random() * 12).toFixed(1);
+            document.getElementById('metric-cpu').textContent = cpu + '%';
+            document.getElementById('bar-cpu').style.width = cpu + '%';
+            document.getElementById('metric-lat').textContent = lat + ' ms';
+            document.getElementById('bar-lat').style.width = (lat * 2) + '%';
+        }, 3000);
+    </script>
+
+    <!-- EXPERIENCE AND LEARNING JOURNEY -->
+    <section id="experience" class="py-24 px-4 sm:px-8 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-neon-magenta font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-magenta/30">Timeline & Growth</span>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">MY JOURNEY</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-neon-magenta to-neon-cyan mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-1/2 before:-translate-x-1/2 before:w-0.5 before:bg-gradient-to-b before:from-neon-cyan before:via-neon-magenta before:to-neon-purple">
+                
+                <!-- Item 1: Professional Internship -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:text-right w-full mb-4 md:mb-0">
+                        <div class="glass-panel p-6 rounded-2xl border border-neon-cyan/30 inline-block text-left w-full">
+                            <span class="text-xs font-mono text-neon-cyan font-bold uppercase tracking-wider block mb-1">Professional Experience</span>
+                            <h3 class="text-xl font-extrabold text-white mb-1">DevOps Intern // YgMinds</h3>
+                            <p class="text-xs text-gray-400 mb-4">Hands-on enterprise cloud & pipeline training</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc list-inside">
+                                <li>Practiced Linux administration & command-line troubleshooting.</li>
+                                <li>Worked with Git and GitHub for collaborative version control.</li>
+                                <li>Learned CI/CD pipeline workflows and Jenkins automation.</li>
+                                <li>Practiced Docker container builds and operational monitoring.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-neon-cyan border-4 border-cosmic-900 z-10 flex items-center justify-center"></div>
+                    <div class="md:w-1/2 md:pl-12 w-full text-left">
+                        <span class="text-xs font-mono text-neon-cyan font-bold">PRACTICAL TRAINING</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Hands-on Projects & Upskilling -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:text-right w-full mb-4 md:mb-0 order-2 md:order-1">
+                        <span class="text-xs font-mono text-neon-magenta font-bold">HANDS-ON INNOVATION</span>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-neon-magenta border-4 border-cosmic-900 z-10"></div>
+                    <div class="md:w-1/2 md:pl-12 w-full order-1 md:order-2">
+                        <div class="glass-panel p-6 rounded-2xl border border-neon-magenta/30 inline-block text-left w-full">
+                            <span class="text-xs font-mono text-neon-magenta font-bold uppercase tracking-wider block mb-1">Personal Projects & Cloud Engineering</span>
+                            <h3 class="text-xl font-extrabold text-white mb-1">AMITVERSE Portfolio & Platforms</h3>
+                            <p class="text-xs text-gray-400 mb-4">End-to-end automation architectures</p>
+                            <ul class="text-xs text-gray-300 space-y-2 list-disc list-inside">
+                                <li>Built OpsPilot and Java 3-Tier CI/CD automated pipelines.</li>
+                                <li>Integrated Prometheus & Grafana for simulated cluster observability.</li>
+                                <li>Explored Terraform infrastructure provisioning across AWS and Azure.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL EASTER EGG -->
+    <section id="terminal" class="py-24 px-4 sm:px-8 relative bg-cosmic-800/40">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-neon-cyan font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-cyan/30">Interactive Shell</span>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-gradient mt-3">AMITVERSE TERMINAL</h2>
+                <p class="text-gray-400 text-xs mt-2 font-mono">Type commands like <span class="text-neon-cyan">help</span>, <span class="text-neon-magenta">skills</span>, <span class="text-neon-lime">cloud</span>, or <span class="text-purple-300">projects</span></p>
+            </div>
+
+            <!-- Terminal Box -->
+            <div class="glass-panel rounded-2xl border border-neon-cyan/50 overflow-hidden shadow-2xl">
+                <!-- Terminal Header Bar -->
+                <div class="bg-cosmic-900/90 px-4 py-3 flex items-center justify-between border-b border-neon-purple/30">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-xs font-mono text-gray-400 ml-2">amit@amitverse:~ (bash)</span>
+                    </div>
+                    <span class="text-xs font-mono text-neon-cyan">v2.5.0</span>
+                </div>
+
+                <!-- Terminal Body -->
+                <div class="p-6 font-mono text-xs sm:text-sm text-gray-200 h-80 overflow-y-auto space-y-3" id="terminal-output">
+                    <p class="text-neon-cyan">Welcome to AMITVERSE Interactive DevOps Terminal.</p>
+                    <p class="text-gray-400">Type <span class="text-neon-lime font-bold">help</span> to see available commands.</p>
+                </div>
+
+                <!-- Terminal Input Form -->
+                <form id="terminal-form" class="bg-cosmic-900/80 px-6 py-4 border-t border-neon-purple/30 flex items-center space-x-3">
+                    <span class="text-neon-cyan font-mono font-bold">amit@amitverse:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" class="flex-1 bg-transparent text-white font-mono focus:outline-none text-sm" placeholder="Type a command...">
+                    <button type="submit" class="px-4 py-2 rounded-lg bg-neon-cyan text-cosmic-900 font-bold font-mono text-xs uppercase tracking-wider hover:opacity-90">Run</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TERMINAL SCRIPT -->
+    <script>
+        const terminalOutput = document.getElementById('terminal-output');
+        const terminalForm = document.getElementById('terminal-form');
+        const terminalInput = document.getElementById('terminal-input');
+
+        const terminalResponses = {
+            'help': 'Available commands: about, skills, projects, cloud, contact, clear',
+            'about': 'Amit Dorwekar — DevOps Engineer based in Pune, India. Passionate about cloud infrastructure, CI/CD, and containerization.',
+            'skills': 'AWS, Microsoft Azure, Docker, Kubernetes, K3s, Terraform, Jenkins, GitHub Actions, Prometheus, Grafana, SonarQube, Python, Linux.',
+            'projects': '1. OpsPilot (End-to-End DevOps Platform)\n2. Java 3-Tier Application CI/CD Pipeline\n3. AWS Cost Monitor Jenkins Pipeline',
+            'cloud': 'Dual Cloud Specialization: AWS (EC2, S3, IAM, VPC, CloudWatch) & Microsoft Azure (VMs, Storage, Virtual Network, Entra ID, Azure Monitor). Connected via Terraform IaC.',
+            'contact': 'GitHub: https://github.com/amitd1299 | LinkedIn: https://linkedin.com/in/amit-dorwekar | Location: Pune, India',
+        };
+
+        terminalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const cmd = terminalInput.value.trim().toLowerCase();
+            if (!cmd) return;
+
+            // Append user command
+            const userP = document.createElement('p');
+            userP.innerHTML = `<span class="text-neon-cyan">amit@amitverse:~$</span> ${escapeHtml(cmd)}`;
+            terminalOutput.appendChild(userP);
+
+            if (cmd === 'clear') {
+                terminalOutput.innerHTML = '';
+            } else if (terminalResponses[cmd]) {
+                const resP = document.createElement('p');
+                resP.className = 'text-gray-300 whitespace-pre-line';
+                resP.textContent = terminalResponses[cmd];
+                terminalOutput.appendChild(resP);
+            } else {
+                const errP = document.createElement('p');
+                errP.className = 'text-red-400';
+                errP.textContent = `Command not recognized: "${cmd}". Type "help" for available commands.`;
+                terminalOutput.appendChild(errP);
+            }
+
+            terminalInput.value = '';
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        });
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+    </script>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-4 sm:px-8 relative">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="text-neon-magenta font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-panel border border-neon-magenta/30">Initiate Connection</span>
+            <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-gradient mt-3">LET'S BUILD SOMETHING EPIC</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-neon-magenta to-neon-cyan mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto mt-6 leading-relaxed">
+                “Interested in DevOps, cloud infrastructure, CI/CD automation, or collaborative technical projects? Let's connect and build something meaningful.”
+            </p>
+
+            <!-- Contact Cards / Links -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+                <a href="https://github.com/amitd1299" target="_blank" rel="noopener noreferrer" class="glass-panel p-6 rounded-2xl border border-neon-cyan/30 hover:border-neon-cyan transition-all group flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base mb-1">GitHub</span>
+                    <span class="text-xs text-gray-400 font-mono">github.com/amitd1299</span>
+                </a>
+
+                <a href="https://linkedin.com/in/amit-dorwekar" target="_blank" rel="noopener noreferrer" class="glass-panel p-6 rounded-2xl border border-neon-magenta/30 hover:border-neon-magenta transition-all group flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl bg-neon-magenta/10 flex items-center justify-center text-neon-magenta text-2xl mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base mb-1">LinkedIn</span>
+                    <span class="text-xs text-gray-400 font-mono">amit-dorwekar</span>
+                </a>
+
+                <div class="glass-panel p-6 rounded-2xl border border-neon-purple/30 flex flex-col items-center justify-center">
+                    <div class="w-12 h-12 rounded-xl bg-neon-purple/10 flex items-center justify-center text-purple-300 text-2xl mb-3">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-base mb-1">Location</span>
+                    <span class="text-xs text-gray-400 font-mono">Pune, Maharashtra, India</span>
+                </div>
+            </div>
+
+            <!-- Back to top button -->
+            <div class="mt-16">
+                <a href="#home" class="inline-flex items-center space-x-2 px-6 py-3 rounded-2xl glass-panel border border-neon-cyan/40 text-neon-cyan font-mono text-xs uppercase tracking-widest hover:bg-neon-cyan/20 transition-all">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <span>Back to Top</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-4 border-t border-neon-purple/20 text-center text-xs font-mono text-gray-500">
+        <p>© 2026 AMITVERSE // Amit Dorwekar. Built with Psychedelic DevOps Passion.</p>
+    </footer>
+
+    <!-- THREE.JS HERO ORB & STARFIELD ANIMATION SCRIPT -->
+    <script>
+        // Background Starfield & Hero Orb Setup with Three.js
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. Background Starfield Canvas
+            const bgCanvas = document.getElementById('bg-canvas');
+            const bgScene = new THREE.Scene();
+            const bgCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const bgRenderer = new THREE.WebGLRenderer({ canvas: bgCanvas, alpha: true, antialias: true });
+            bgRenderer.setSize(window.innerWidth, window.innerHeight);
+            bgRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 1500;
+            const posArray = new Float32Array(particlesCount * 3);
+
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 10;
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.015,
+                color: 0x00f0ff,
+                transparent: true,
+                opacity: 0.8
+            });
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            bgScene.add(particlesMesh);
+            bgCamera.position.z = 3;
+
+            // 2. Hero Interactive Cosmic Orb
+            const orbContainer = document.getElementById('hero-orb-container');
+            const orbScene = new THREE.Scene();
+            const orbCamera = new THREE.PerspectiveCamera(75, orbContainer.clientWidth / orbContainer.clientHeight, 0.1, 1000);
+            const orbRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            orbRenderer.setSize(orbContainer.clientWidth, orbContainer.clientHeight);
+            orbRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            orbContainer.appendChild(orbRenderer.domElement);
+
+            // Orb Geometry with Neon Shader/Material
+            const sphereGeometry = new THREE.SphereGeometry(1.2, 64, 64);
+            const sphereMaterial = new THREE.MeshStandardMaterial({
+                color: 0x9d00ff,
+                wireframe: true,
+                emissive: 0xff007f,
+                emissiveIntensity: 0.6,
+                roughness: 0.2,
+                metalness: 0.8
+            });
+            const cosmicOrb = new THREE.Mesh(sphereGeometry, sphereMaterial);
+            orbScene.add(cosmicOrb);
+
+            // Outer ring
+            const ringGeometry = new THREE.TorusGeometry(1.8, 0.03, 16, 100);
+            const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x00f0ff, wireframe: true });
+            const cosmicRing = new THREE.Mesh(ringGeometry, ringMaterial);
+            cosmicRing.rotation.x = Math.PI / 3;
+            orbScene.add(cosmicRing);
+
+            // Lights
+            const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+            orbScene.add(ambientLight);
+            const pointLight = new THREE.PointLight(0x00f0ff, 3, 50);
+            pointLight.position.set(5, 5, 5);
+            orbScene.add(pointLight);
+
+            orbCamera.position.z = 4;
+
+            // Mouse interactivity for orb
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+
+            document.addEventListener('mousemove', (event) => {
+                mouseX = (event.clientX - window.innerWidth / 2) / 200;
+                mouseY = (event.clientY - window.innerHeight / 2) / 200;
+            });
+
+            // Animation Loop
+            const clock = new THREE.Clock();
+            function animate() {
+                requestAnimationFrame(animate);
+                const elapsedTime = clock.getElapsedTime();
+
+                // Rotate starfield
+                particlesMesh.rotation.y = elapsedTime * 0.03;
+                particlesMesh.rotation.x = elapsedTime * 0.01;
+
+                // Rotate cosmic orb & rings smoothly towards mouse
+                targetX = mouseX * 0.5;
+                targetY = mouseY * 0.5;
+
+                cosmicOrb.rotation.y += 0.005 + (targetX - cosmicOrb.rotation.y) * 0.05;
+                cosmicOrb.rotation.x += 0.003 + (targetY - cosmicOrb.rotation.x) * 0.05;
+
+                cosmicRing.rotation.z -= 0.008;
+                cosmicRing.rotation.y += 0.004;
+
+                bgRenderer.render(bgScene, bgCamera);
+                orbRenderer.render(orbScene, orbCamera);
+            }
+            animate();
+
+            // Window resize handler
+            window.addEventListener('resize', () => {
+                bgCamera.aspect = window.innerWidth / window.innerHeight;
+                bgCamera.updateProjectionMatrix();
+                bgRenderer.setSize(window.innerWidth, window.innerHeight);
+
+                if (orbContainer) {
+                    orbCamera.aspect = orbContainer.clientWidth / orbContainer.clientHeight;
+                    orbCamera.updateProjectionMatrix();
+                    orbRenderer.setSize(orbContainer.clientWidth, orbContainer.clientHeight);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
